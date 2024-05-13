@@ -1,5 +1,5 @@
 {% set name = "mesher" %}
-{% set version = "2.1.4" %}
+{% set version = "2.1.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/mesher-{{ version }}.tar.gz
-  sha256: a142b6c5773187ddd98bb9f422a9a8545f90f2482f4c9f5089b1f7f54ea30caf
+  sha256: a9e2034147ec6fc8789d5437ea9a48ea966682da936982ded6c86d8ba58c760f
 
 build:
   entry_points:
@@ -18,8 +18,8 @@ build:
     - meshpermutation = mesher.tools.meshpermutation:main
     - meshstats = mesher.tools.meshstats:main
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
-  skip: True  # [win]
+  number: 0
+  skip: true  # [win]
 
 requirements:
   build:
@@ -50,7 +50,7 @@ requirements:
     - metis-python
     - mpi4py
     - natsort
-    - gmp   
+    - gmp
 
 test:
   imports:
@@ -63,7 +63,8 @@ test:
 
 about:
   home: https://github.com/Chrismarsh/mesher
-  summary: Mesher is a novel multi-objective unstructured mesh generation software that allows mesh generation to be generated from an arbitrary number of hydrologically important features while maintaining a variable spatial resolution. Triangle quality is guaranteed as well as a smooth graduation from small to large triangles. Including these additional features resulted in a better representation of spatial heterogeneity versus classic topography-only mesh generation.
+  summary: Mesher is a novel multi-objective unstructured mesh generation software that allows mesh generation to be generated from an arbitrary number of hydrologically important features while maintaining a variable spatial resolution. Triangle quality is guaranteed as well as a smooth graduation from small to large triangles.
+    Including these additional features resulted in a better representation of spatial heterogeneity versus classic topography-only mesh generation.
   license: GPL-3.0-or-later
   license_file: LICENSE
 
