@@ -1,5 +1,5 @@
 {% set name = "mesher" %}
-{% set version = "2.1.6" %}
+{% set version = "2.1.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/mesher-{{ version }}.tar.gz
-  sha256: 0620598c44fc5c4256fb3f93b1c7583b143b21729f780621efa9824d7d9e4a55
+  sha256: 8c6635cdcd3426fa1583a2b59d4546e209a324754f32c487da301c03b6170726
 
 build:
   entry_points:
@@ -18,7 +18,7 @@ build:
     - meshpermutation = mesher.tools.meshpermutation:main
     - meshstats = mesher.tools.meshstats:main
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
   skip: true  # [win]
 
 requirements:
