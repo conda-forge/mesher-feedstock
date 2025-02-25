@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/mesher-{{ version }}.tar.gz
-  sha256: 33340dd65877dacfc9200db2fec11369b4b6eda3d89f21b6bdca281e359332b7
+  sha256: 74beeb84d96edeb56e7502403956861dd66de138eb96ec0fdc10cd493c3b33b8
 
 build:
   entry_points:
