@@ -1,5 +1,5 @@
 {% set name = "mesher" %}
-{% set version = "2.1.11" %}
+{% set version = "2.1.12" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/mesher-{{ version }}.tar.gz
-  sha256: 74beeb84d96edeb56e7502403956861dd66de138eb96ec0fdc10cd493c3b33b8
+  sha256: d2ce00005a34d649b0692a16fbd5173e31090713b6a1874ad1f100ecdd93e534
 
 build:
   entry_points:
