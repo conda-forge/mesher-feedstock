@@ -16,6 +16,8 @@ cxx_compiler_version:
 - '18'
 libboost_devel:
 - '1.86'
+libgdal:
+- '3.10'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 metis:
