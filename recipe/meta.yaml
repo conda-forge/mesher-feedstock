@@ -18,7 +18,7 @@ build:
     - meshpermutation = mesher.tools.meshpermutation:main
     - meshstats = mesher.tools.meshstats:main
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 2
   skip: true  # [win]
 
 requirements:
